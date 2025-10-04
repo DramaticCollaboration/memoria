@@ -44,7 +44,7 @@ const grid = ref([
   { type: 'img', src: 'https://images.unsplash.com/photo-1460353581641-37baddab0fa2?q=80&w=1200&auto=format&fit=crop', label: '함께한 순간' },
   { type: 'video', src: 'https://www.w3schools.com/html/mov_bbb.mp4', label: '스토리텔링 영상' },
   { type: 'img', src: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop', label: '복원된 이미지' },
-]);
+] as {type: 'img'|'video', src: string, label: string}[] );
 
 const viewer = ref(false);
 const current = ref<{type: 'img'|'video', src: string} | null>(null);

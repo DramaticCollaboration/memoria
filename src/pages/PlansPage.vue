@@ -52,6 +52,6 @@
 import { useRouter } from 'vue-router';
 const router = useRouter();
 function choose (plan: 'basic'|'premium') {
-  router.push({ path: '/checkout', query: { plan } });
+  void router.push({ path: '/checkout', query: { plan } });
 }
 </script>

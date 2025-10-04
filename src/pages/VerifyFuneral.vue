@@ -45,7 +45,7 @@ const form = reactive({ company: null as string | null, customerNo: '', name: ''
 const loading = ref(false);
 const success = ref(false);
 
-async function onSubmit () {
+function onSubmit () {
   loading.value = true;
   // TODO: integrate with backend API securely (HttpOnly cookies)
   setTimeout(() => {
@@ -54,8 +54,8 @@ async function onSubmit () {
   }, 800);
 }
 
-function goPlans () {
+async function goPlans () {
   success.value = false;
-  router.push('/plans');
+  await router.push('/plans');
 }
 </script>

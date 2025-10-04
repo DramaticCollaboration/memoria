@@ -29,7 +29,7 @@
       <q-uploader
         label="파일 업로드"
         accept="image/*,video/*"
-        auto-upload="false"
+        :auto-upload="false"
         :disable="!currentUserCanUpload"
       />
       <div v-if="!currentUserCanUpload" class="text-negative text-caption q-mt-sm">업로드 권한이 없습니다.</div>

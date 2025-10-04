@@ -8,7 +8,7 @@
       <q-uploader
         label="음성 파일 업로드 (wav/mp3)"
         accept="audio/*"
-        auto-upload="false"
+        :auto-upload="false"
         @added="onAdded"
       />
     </q-card>
@@ -29,8 +29,8 @@ import { ref } from 'vue';
 const previewUrl = ref<string | null>(null);
 
 function onAdded (files: readonly File[]) {
-  if (files && files.length) {
-    previewUrl.value = URL.createObjectURL(files[0]);
+  if (files && files.length > 0) {
+    previewUrl.value = URL.createObjectURL(files[0] as Blob | MediaSource);
   }
 }
 </script>
