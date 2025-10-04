@@ -4,11 +4,15 @@
       <q-toolbar>
         <q-btn flat dense round icon="menu" aria-label="Menu" @click="toggleLeftDrawer" />
 
-        <q-toolbar-title> Memoria </q-toolbar-title>
+        <q-toolbar-title>
+          <router-link :to="{ name: 'home' }" class="text-white text-decoration-none cursor-pointer">
+          Memoria
+        </router-link>
+        </q-toolbar-title>
       </q-toolbar>
     </q-header>
 
-    <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
+    <q-drawer v-model="leftDrawerOpen" bordered>
       <q-list padding>
         <q-item-label header>페르소나별 메뉴</q-item-label>
 
